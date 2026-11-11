@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#15233b">
+  <title>MedCare | Roster Workspace</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to workspace</a>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Workspace">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v6m0 6v6M3 12h6m6 0h6M7 7l2 2m6 6 2 2m0-10-2 2m-6 6-2 2"/></svg></span>
+        <div><div class="brand-name">MedCare</div><div class="brand-subtitle">Roster Workspace</div></div>
+      </div>
+      <nav class="role-nav" aria-label="Switch demo role">
+        <div class="nav-label">Switch demo role</div>
+        <button id="provider-role" class="role-button" data-action="role" data-value="provider" aria-pressed="true"></button>
+        <button id="plan-role" class="role-button" data-action="role" data-value="plan" aria-pressed="false"></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="demo-label"><span class="demo-dot"></span> Synthetic data</div>
+        <button class="reset" data-action="reset"></button>
+      </div>
+    </aside>
+    <main id="main" tabindex="-1"></main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <dialog id="action-dialog" aria-labelledby="dialog-title">
+    <form id="action-form">
+      <div class="dialog-header">
+        <div><h2 id="dialog-title"></h2><p id="dialog-context"></p></div>
+        <button type="button" class="icon-button" data-action="close-dialog" aria-label="Close"></button>
+      </div>
+      <div id="dialog-fields"></div>
+      <div class="dialog-actions">
+        <button type="button" class="button secondary" data-action="close-dialog">Cancel</button>
+        <button id="dialog-submit" class="button primary" type="submit"></button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>
